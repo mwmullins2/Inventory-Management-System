@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mwmullinswgu.apphomescreen.AddPartFormController">
+   <children>
+      <Label layoutX="39.0" layoutY="87.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="157.0" layoutY="87.0" mnemonicParsing="false" onAction="#inHouseRadioSelected" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="partSourceGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="311.0" layoutY="87.0" mnemonicParsing="false" onAction="#outsourcedRadioSelected" text="Outsourced" toggleGroup="$partSourceGroup" />
+      <TextField fx:id="iDTextField" alignment="CENTER" disable="true" editable="false" layoutX="126.0" layoutY="143.0" promptText="Auto-Generated" />
+      <TextField fx:id="nameTextField" layoutX="126.0" layoutY="183.0" />
+      <TextField fx:id="invTextField" layoutX="126.0" layoutY="229.0" />
+      <TextField fx:id="priceTextField" layoutX="126.0" layoutY="273.0" />
+      <TextField fx:id="maxTextField" layoutX="126.0" layoutY="318.0" />
+      <TextField fx:id="partSourceTextField" layoutX="126.0" layoutY="365.0" />
+      <TextField fx:id="minTextField" layoutX="341.0" layoutY="318.0" />
+      <Label layoutX="25.0" layoutY="147.0" text="ID" />
+      <Label layoutX="23.0" layoutY="187.0" text="Name" />
+      <Label layoutX="31.0" layoutY="233.0" text="Inv" />
+      <Label layoutX="24.0" layoutY="277.0" text="Price/Cost" />
+      <Label layoutX="28.0" layoutY="322.0" text="Max" />
+      <Label layoutX="301.0" layoutY="322.0" text="Min" />
+      <Label fx:id="partSourceLabel" layoutX="22.0" layoutY="369.0" text="Machine ID" />
+      <Button layoutX="275.0" layoutY="428.0" mnemonicParsing="false" onAction="#addPartFormSaveClick" text="Save" />
+      <Button layoutX="341.0" layoutY="428.0" mnemonicParsing="false" onAction="#addPartFormCancelClick" text="Cancel" />
+   </children>
+</AnchorPane>

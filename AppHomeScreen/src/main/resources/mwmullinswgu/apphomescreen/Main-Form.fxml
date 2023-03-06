@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mwmullinswgu.apphomescreen.MainFormController">
+   <children>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff00" height="250.0" layoutX="600.0" layoutY="90.0" stroke="BLACK" width="450.0" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff00" height="250.0" layoutX="50.0" layoutY="90.0" stroke="BLACK" width="450.0" />
+      <Button layoutX="304.0" layoutY="301.0" mnemonicParsing="false" onAction="#mainFormAddPartClick" text="Add" />
+      <Label layoutX="27.0" layoutY="35.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button layoutX="352.0" layoutY="301.0" mnemonicParsing="false" onAction="#mainFormModifyPartClick" text="Modify" />
+      <Button layoutX="428.0" layoutY="301.0" mnemonicParsing="false" onAction="#mainFormDeletePartClick" text="Delete" />
+      <Button layoutX="839.0" layoutY="301.0" mnemonicParsing="false" onAction="#mainFormAddProductClick" text="Add" />
+      <Button layoutX="894.0" layoutY="301.0" mnemonicParsing="false" onAction="#mainFormModifyProductClick" text="Modify" />
+      <Button layoutX="960.0" layoutY="301.0" mnemonicParsing="false" onAction="#mainFormDeleteProductClick" text="Delete" />
+      <Button layoutX="942.0" layoutY="354.0" mnemonicParsing="false" onAction="#mainFormExitClick" text="Exit" />
+      <TableView fx:id="mainFormPartsTable" layoutX="69.0" layoutY="138.0" prefHeight="150.0" prefWidth="400.0">
+        <columns>
+            <TableColumn id="partID" fx:id="partID" prefWidth="75.0" text="Part ID" />
+            <TableColumn id="partName" fx:id="partName" prefWidth="84.0" text="Part Name" />
+            <TableColumn id="partInventoryLevel" fx:id="partInventoryLevel" prefWidth="92.0" text="Inventory Level" />
+            <TableColumn id="partPrice" fx:id="partPrice" prefWidth="171.0" text="Price/ Cost per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="mainFormProductsTable" layoutX="625.0" layoutY="138.0" prefHeight="150.0" prefWidth="400.0">
+        <columns>
+            <TableColumn id="productID" fx:id="productID" prefWidth="75.0" text="Product ID" />
+            <TableColumn id="productName" fx:id="productName" prefWidth="87.0" text="Product Name" />
+            <TableColumn id="productInventoryLevel" fx:id="productInventoryLevel" prefWidth="96.0" text="Inventory Level" />
+            <TableColumn id="productPrice" fx:id="productPrice" prefWidth="164.0" text="Price/ Cost per Unit" />
+        </columns>
+      </TableView>
+      <Label layoutX="94.0" layoutY="121.0" text="Parts">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="637.0" layoutY="121.0" text="Products">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partSearch" layoutX="320.0" layoutY="109.0" onKeyPressed="#partSearchKeyPressed" promptText="Search by Part ID or Name" />
+      <TextField fx:id="productSearch" layoutX="874.0" layoutY="109.0" onKeyPressed="#productSearchKeyPressed" promptText="Search by Product ID or Name" />
+   </children>
+</AnchorPane>

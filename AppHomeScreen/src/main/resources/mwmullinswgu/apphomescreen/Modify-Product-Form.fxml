@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="649.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mwmullinswgu.apphomescreen.ModifyProductController">
+    <children>
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff00" height="576.0" layoutX="25.0" layoutY="43.0" stroke="BLACK" width="858.0" />
+        <Label layoutX="72.0" layoutY="93.0" text="Modify Product">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="partSearch" layoutX="699.0" layoutY="68.0" onKeyPressed="#partSearchKeyPress" promptText="Search by Part ID or Name" />
+        <TableView fx:id="allPartTable" layoutX="455.0" layoutY="116.0" prefHeight="158.0" prefWidth="393.0">
+            <columns>
+                <TableColumn fx:id="allPartIDCol" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="allPartNameCol" prefWidth="75.0" text="Part Name" />
+                <TableColumn fx:id="allPartInvCol" prefWidth="92.0" text="Inventory Level" />
+                <TableColumn fx:id="allPartPriceCol" prefWidth="150.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="associatedPartTable" layoutX="454.0" layoutY="354.0" prefHeight="158.0" prefWidth="393.0">
+            <columns>
+                <TableColumn fx:id="assocPartIDCol" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="assocPartNameCol" prefWidth="88.0" text="Part Name" />
+                <TableColumn fx:id="assocPartInvCol" prefWidth="93.0" text="Inventory Level" />
+                <TableColumn fx:id="assocPartPriceCol" prefWidth="136.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <Button layoutX="748.0" layoutY="300.0" mnemonicParsing="false" onAction="#modifyProductFormAddClick" text="Add" />
+        <Button layoutX="679.0" layoutY="523.0" mnemonicParsing="false" onAction="#modifyProductFormRAPClick" prefHeight="25.0" prefWidth="149.0" text="Remove Associated Part" />
+        <Button layoutX="679.0" layoutY="569.0" mnemonicParsing="false" onAction="#modifyProductFormSaveClick" text="Save" />
+        <Button layoutX="774.0" layoutY="569.0" mnemonicParsing="false" onAction="#modifyProductFormCancelClick" text="Cancel" />
+        <TextField fx:id="productIDTextField" alignment="CENTER" disable="true" layoutX="125.0" layoutY="157.0" promptText="Auto-Generated" />
+        <TextField fx:id="productNameTextField" layoutX="125.0" layoutY="195.0" />
+        <TextField fx:id="productInvTextField" layoutX="125.0" layoutY="235.0" prefHeight="25.0" prefWidth="91.0" />
+        <TextField fx:id="productPriceTextField" layoutX="125.0" layoutY="274.0" prefHeight="25.0" prefWidth="91.0" />
+        <TextField fx:id="productMaxTextField" layoutX="125.0" layoutY="312.0" prefHeight="25.0" prefWidth="91.0" />
+        <TextField fx:id="productMinTextField" layoutX="274.0" layoutY="312.0" prefHeight="25.0" prefWidth="91.0" />
+        <Label layoutX="72.0" layoutY="161.0" text="ID" />
+        <Label layoutX="72.0" layoutY="199.0" text="Name" />
+        <Label layoutX="72.0" layoutY="239.0" text="Inv" />
+        <Label layoutX="72.0" layoutY="278.0" text="Price" />
+        <Label layoutX="72.0" layoutY="317.0" text="Max" />
+        <Label layoutX="237.0" layoutY="317.0" text="Min" />
+    </children>
+</AnchorPane>
