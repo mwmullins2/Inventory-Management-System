@@ -9,7 +9,7 @@ To use the Inventory Management System, follow these steps:
 
 * Clone or download this repository.
 * Open the project in an IDE of your choice that supports JavaFX, such as Eclipse or IntelliJ IDEA.
-* Run the Main.java file to start the application.
+* Run the InventoryManagement.java file to start the application.
 * Use the buttons in the application to add, modify, or delete parts and products.
 # Features
 The Inventory Management System has the following features:
